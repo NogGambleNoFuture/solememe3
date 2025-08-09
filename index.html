@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SolMeme Movers — Top 30</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script defer src="passkey.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div id="passkey-screen" class="passkey-screen hidden">
+    <div class="passkey-box">
+      <h2>🔑 Enter Passkey</h2>
+      <input type="password" id="passkey-input" placeholder="Passkey" />
+      <button id="passkey-submit">Unlock</button>
+      <p id="passkey-error" class="error"></p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">⚡ SolMeme Movers</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="playbook.html">Trading Playbook</a>
+    </nav>
+    <div class="controls">
+      <select id="timeframeSelect">
+        <option value="m1">1m</option>
+        <option value="h1" selected>1h</option>
+        <option value="d1">24h</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Top 30 Meme Coin Movers — Solana</h1>
+      <p class="muted">Data from DexScreener. Click a token to view chart. Side panel shows Twitter feeds.</p>
+    </section>
+
+    <div class="layout">
+      <section class="table-wrap">
+        <table id="moversTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>1h %</th>
+              <th>24h %</th>
+              <th>Market</th>
+            </tr>
+          </thead>
+          <tbody id="tokenTable"><tr><td colspan="7">Loading...</td></tr></tbody>
+        </table>
+      </section>
+      <aside class="sidepanel">
+        <h3>Twitter Feeds</h3>
+        <a class="twitter-timeline" data-height="400" href="https://twitter.com/elonmusk">Tweets by Elon Musk</a>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
